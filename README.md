@@ -140,6 +140,7 @@ Two incremental batches were dropped into `raw_data/incremental/` and reprocesse
 ## 6. Dashboard (Bonus)
 
 Three required visuals, built on the Gold layer:
+![Dashboard](Screenshot%202026-06-29%20202002.png)
 
 - **Revenue by Region** — West $713.5K > East $672.5K > Central $497.8K > South $389.0K
 - **Revenue by Category** — Technology $836.2K > Furniture $733.1K > Office Supplies $703.5K
