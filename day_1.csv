@@ -1,0 +1,7 @@
+Row ID,Order ID,Order Date,Ship Date,Ship Mode,Customer ID,Customer Name,Segment,Country,City,State,Postal Code,Region,Product ID,Category,Sub-Category,Product Name,Sales,Quantity,Discount,Profit
+9998,CA-2024-100001,1/5/2024,1/8/2024,Second Class,CG-12520,Claire Gute,Consumer,United States,Henderson,Kentucky,42420,South,FUR-BO-10001798,Furniture,Bookcases,Bush Somerset Collection Bookcase,261.96,2,0,41.91
+9999,CA-2024-100001,1/5/2024,1/8/2024,Second Class,CG-12520,Claire Gute,Consumer,United States,Henderson,Kentucky,42420,South,FUR-CH-10000454,Furniture,Chairs,Hon Deluxe Fabric Upholstered Stacking Chairs,731.94,3,0,219.58
+10000,CA-2024-100002,1/6/2024,1/10/2024,Second Class,DV-13045,Darrin Van Huff,Corporate,United States,Los Angeles,California,90036,West,OFF-LA-10000240,Office Supplies,Labels,Self-Adhesive Address Labels for Typewriters,14.62,2,0,6.87
+10001,CA-2024-100003,1/7/2024,1/11/2024,First Class,SO-20335,Sean O'Donnell,Consumer,United States,Fort Lauderdale,Florida,33311,South,FUR-TA-10000577,Furniture,Tables,Bretford CR4500 Series Slim Rectangular Table,957.58,5,0.45,-383.03
+10002,CA-2024-100004,1/8/2024,1/12/2024,Standard Class,BH-11710,Brosina Hoffman,Consumer,United States,Los Angeles,California,90032,West,OFF-ST-10000760,Office Supplies,Storage,Eldon Fold N Roll Cart System,22.37,2,0,2.52
+10003,CA-2024-100005,1/9/2024,1/13/2024,Standard Class,AA-10480,Andrew Allen,Consumer,United States,Concord,North Carolina,28027,South,OFF-PA-10002365,Office Supplies,Paper,Xerox 1967,15.55,3,0.2,5.44

@@ -1,0 +1,6 @@
+Row ID,Order ID,Order Date,Ship Date,Ship Mode,Customer ID,Customer Name,Segment,Country,City,State,Postal Code,Region,Product ID,Category,Sub-Category,Product Name,Sales,Quantity,Discount,Profit
+10009,CA-2024-100011,1/19/2024,1/23/2024,Second Class,KL-16645,Karl Lehmann,Consumer,United States,Philadelphia,Pennsylvania,19143,East,FUR-FU-10001487,Furniture,Furnishings,Eldon Image Series Desk Accessories,3.54,2,0.2,1.06
+10010,CA-2024-100012,1/20/2024,1/24/2024,First Class,MS-17320,Matt Shillingsburg,Home Office,United States,Baltimore,Maryland,21215,East,TEC-PH-10003645,Technology,Phones,Cisco SPA525G2 5-Line IP Phone,318.4,2,0,96.16
+10011,CA-2024-100011,1/21/2024,1/19/2024,Standard Class,BF-10975,Barry Franz,Consumer,United States,Houston,Texas,77070,Central,OFF-EN-10000927,Office Supplies,Envelopes,Poly String Tie Envelopes,19.44,3,0.2,6.22
+10012,CA-2024-100014,1/22/2024,1/20/2024,Second Class,CP-12085,Chris Pfeiffer,Consumer,United States,Dallas,Texas,75243,Central,TEC-AC-10004633,Technology,Accessories,Logitech Wireless Combo MK270,-25.0,3,0,18.45
+10013,CA-2024-100015,1/23/2024,1/27/2024,Standard Class,DB-13405,Daryl Barnes,Consumer,United States,Chicago,Illinois,60623,Central,FUR-CH-10002774,Furniture,Chairs,Global Ergonomic Managers Chair,402.72,0,0.2,80.54

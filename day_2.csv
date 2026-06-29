@@ -1,0 +1,7 @@
+Row ID,Order ID,Order Date,Ship Date,Ship Mode,Customer ID,Customer Name,Segment,Country,City,State,Postal Code,Region,Product ID,Category,Sub-Category,Product Name,Sales,Quantity,Discount,Profit
+10004,CA-2024-100006,1/12/2024,1/15/2024,First Class,IM-15070,Irene Maddox,Consumer,United States,Seattle,Washington,98103,West,TEC-PH-10002275,Technology,Phones,Mitel 5320 IP Phone VoIP phone,907.15,3,0.2,90.72
+10005,CA-2024-100007,1/13/2024,1/17/2024,Second Class,HP-14815,Harold Pawlan,Home Office,United States,Fort Worth,Texas,76106,Central,OFF-AP-10002892,Office Supplies,Appliances,Belkin F5C206VTEL6 6 Outlet Metal Surge,68.81,5,0.8,-123.86
+10006,CA-2024-100008,1/14/2024,1/18/2024,Standard Class,PK-19075,Pete Kriz,Consumer,United States,Madison,Wisconsin,53711,Central,OFF-BI-10003910,Office Supplies,Binders,Avery 5 1/2 x 4 1/4 Pad-Style Post-It Notes,2.54,3,0,1.27
+10007,CA-2024-100009,1/15/2024,1/19/2024,Standard Class,AG-10270,Alejandro Grove,Consumer,United States,West Jordan,Utah,84084,West,TEC-AC-10003033,Technology,Accessories,Plantronics CS510 Wireless Headset,64.9,2,0,20.44
+9998,CA-2024-100001,1/5/2024,1/8/2024,Second Class,CG-12520,Claire Gute,Consumer,United States,Henderson,Kentucky,42420,South,FUR-BO-10001798,Furniture,Bookcases,Bush Somerset Collection Bookcase,261.96,2,0,41.91
+10008,CA-2024-100010,1/16/2024,1/14/2024,Standard Class,ZC-21910,Zuschuss Carroll,Consumer,United States,San Francisco,California,94109,West,TEC-PH-10004977,Technology,Phones,iPhone,-50.0,-1,-0.1,25.0
