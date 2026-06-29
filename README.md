@@ -1,6 +1,6 @@
 # Superstore Lakehouse Pipeline — Documentation
 
-**Platform:** Databricks Free Edition · Unity Catalog · Delta Lake · Spark SQL / PySpark (Photon)
+**Platform:** Databricks Free Edition · Unity Catalog · Delta Lake · Spark SQL / PySpark (Photon) /
 **Catalog.Schema:** `ymotorna_DB.superstore_lakehouse` · **Volume:** `raw_data` (`initial/`, `incremental/`)
 
 ---
