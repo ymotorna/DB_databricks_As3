@@ -139,3 +139,7 @@ Total revenue reconciles across both bar charts (~$2.27M), consistent with `silv
 - **Silver merge watermark:** the `MERGE` source filter is `ingestion_timestamp > MAX(ingestion_timestamp) FROM silver_orders`. When a whole batch is rejected (as in Increment 1, where 0 rows reached `silver_orders`), that watermark doesn't advance, so the next merge re-evaluates the prior batch too. This is the likely cause of the small reconciliation gap observed after Increment 2 (5 new Bronze rows in, but only 2 net new rows landed across both Silver tables) — recommend watermarking off Bronze `ingestion_timestamp` directly, or off the max across both Silver tables.
 - **No cross-layer schema/contract tests:** type mismatches surface only as `NULL` (via `try_cast`) and are caught implicitly by the Silver validation `CASE`, not by an explicit schema check.
 - **Performance benchmark scope:** Task 6 timings (1.24s vs 0.85s) are from a single run on a small dataset with serverless Free Edition compute and no concurrent load — useful to illustrate the plan difference, not a production-scale benchmark.
+
+  ## 📎 References
+
+- [Claude.ai](https://claude.ai/share/31bed5cf-4c88-404b-bd9e-4d768ef1865f)
