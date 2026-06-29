@@ -1,6 +1,7 @@
 # Superstore Lakehouse Pipeline — Documentation
 
-**Platform:** Databricks Free Edition · Unity Catalog · Delta Lake · Spark SQL / PySpark (Photon) /
+**Platform:** Databricks Free Edition · Unity Catalog · Delta Lake · Spark SQL / PySpark (Photon) 
+
 **Catalog.Schema:** `ymotorna_DB.superstore_lakehouse` · **Volume:** `raw_data` (`initial/`, `incremental/`)
 
 ---
@@ -8,18 +9,42 @@
 ## 1. Architecture
 
 ```mermaid
-flowchart LR
-    A[Raw CSV files\nVolume: raw_data] -->|read_files / COPY INTO| B[🥉 Bronze\nbronze_orders]
-    B -->|dedup, standardize, validate| C[🥈 Silver\nsilver_orders]
-    B -->|dedup, standardize, validate| C2[🥈 Silver\nsilver_rejected_orders]
-    C -->|GROUP BY aggregations| D[🥇 Gold\nsales_daily / sales_region /\nsales_category / customer_metrics / products]
-    D -->|Spark SQL window functions| E[📊 Analytics & Dashboard]
+flowchart TD
+    subgraph raw [Volume: raw_data]
+        F1["initial folder\nsuperstore.csv\none-time load"]
+        F2["incremental folder\nday_1.csv, day_2.csv, day_3.csv\ndaily new files"]
+    end
+
+    subgraph bronze [Bronze Layer]
+        B["bronze_orders\nrenamed cols + casted dtypes + metadata"]
+    end
+
+    subgraph silver [Silver Layer]
+        C["silver_orders\nvalid records"]
+        C2["silver_rejected_orders\ninvalid records"]
+    end
+
+    subgraph gold [Gold Layer]
+        D["gold_sales_daily\ngold_sales_region\ngold_sales_category\ngold_customer_metrics\nproducts"]
+    end
+
+    F1 -->|"1st run only\nCTAS + read_files\ncreates and fills bronze_orders"| B
+    F2 -->|"every run\nCOPY INTO with SELECT transformation\nskips already loaded files"| B
+
+    B -->|"dedup ROW NUMBER\nlowercase + trim\nvalidation rules"| C
+    B -->|"failed validation"| C2
+
+    C -->|"MERGE INTO\nincremental only - new rows since last load"| C
+    C2 -->|"MERGE INTO\nincremental only"| C2
+
+    C -->|"INSERT OVERWRITE\nfull recalculation each run"| D
+    D -->|"Spark SQL window functions\nROW NUMBER, LAG, SUM OVER"| E["Analytics\nDashboard"]
 ```
 
 | Layer | Table(s) | Grain |
 |---|---|---|
 | Bronze | `bronze_orders` | 1 row per raw CSV record |
-| Silver | `silver_orders`, `silver_rejected_orders` | 1 row per valid / invalid order line, deduplicated |
+| Silver | `silver_orders`, `silver_rejected_orders` | 1 row per valid / invalid order line, deduplicated, filtered |
 | Gold | `gold_sales_daily`, `gold_sales_region`, `gold_sales_category`, `gold_customer_metrics`, `gold_products` | Aggregated, business-facing |
 | Analytics | ad-hoc Spark SQL | Reporting / dashboard |
 
